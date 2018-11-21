@@ -4379,13 +4379,12 @@ var elm$core$Array$foldr = F3(
 var elm$core$Array$toList = function (array) {
 	return A3(elm$core$Array$foldr, elm$core$List$cons, _List_Nil, array);
 };
-var elm$core$Basics$add = _Basics_add;
 var elm$core$Basics$fdiv = _Basics_fdiv;
 var elm$core$Basics$mul = _Basics_mul;
 var elm$core$Basics$sub = _Basics_sub;
 var author$project$Main$cut12thCalc = F3(
 	function (initBH, goalBH, cut1st) {
-		return (((cut1st / 1000) + (goalBH - initBH)) / 2) * 1000;
+		return ((cut1st / 2000) - ((goalBH - initBH) / 2)) * 1000;
 	});
 var elm$core$Maybe$Just = function (a) {
 	return {$: 'Just', a: a};
@@ -4428,6 +4427,7 @@ var author$project$Main$maybeCut12thCalc = F3(
 			return 'Error';
 		}
 	});
+var elm$core$Basics$add = _Basics_add;
 var author$project$Main$cut1stCalc = F3(
 	function (initBH, goalBH, cut12th) {
 		return ((goalBH - initBH) + ((2 * cut12th) / 1000)) * 1000;

@@ -98,7 +98,7 @@ maybeCut12thCalc initBH goalBH cut1st =
       "Error"
 
 cut12thCalc initBH goalBH cut1st =
-  ( cut1st / 1000 + ( goalBH - initBH ) ) / 2 * 1000
+  ( cut1st / 2000 - ( goalBH - initBH ) / 2 ) * 1000
 
 -- VIEW
 
